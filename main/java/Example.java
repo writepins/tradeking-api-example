@@ -3,7 +3,7 @@
  * http://www.miserablemind.com | Twitter: @lrimkus
  * The MIT License (MIT)
  */
- 
+
 import com.miserablemind.api.consumer.tradeking.api.*;
 import com.miserablemind.api.consumer.tradeking.api.domain.account.summary.AccountsSummary;
 import com.miserablemind.api.consumer.tradeking.api.domain.market.StockQuote;
@@ -15,6 +15,7 @@ import com.miserablemind.api.consumer.tradeking.api.impl.TradeKingTemplate;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 public class Example {
