@@ -1,3 +1,9 @@
+/*
+ * Miserable Mind
+ * http://www.miserablemind.com | Twitter: @lrimkus
+ * The MIT License (MIT)
+ */
+ 
 import com.miserablemind.api.consumer.tradeking.api.*;
 import com.miserablemind.api.consumer.tradeking.api.domain.account.summary.AccountsSummary;
 import com.miserablemind.api.consumer.tradeking.api.domain.market.StockQuote;
@@ -38,7 +44,7 @@ public class Example {
      */
     private static void printStreaming(TradeKingOperations traderKingOperations) {
         StreamingOperations streamingOperations = traderKingOperations.getStreamingOperations();
-        ArrayList<StreamListener> listeners = new ArrayList<>();
+        List<StreamListener> listeners = new ArrayList<>();
         listeners.add(new StreamPrint());
         streamingOperations.quotesAndTradesStream(listeners, new String[]{"AAPL", "GOOG"});
     }
