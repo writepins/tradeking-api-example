@@ -1,5 +1,5 @@
 # tradeking-api-example
-Example how to use Java library for Tradeking API
+Example how to use Java library for Tradeking API (https://github.com/lrimkus/tradeking-api-consumer)
 
 It consists of three files: 
 
