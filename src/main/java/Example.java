@@ -47,6 +47,9 @@ public class Example {
         StreamingOperations streamingOperations = traderKingOperations.getStreamingOperations();
         List<StreamListener> listeners = new ArrayList<>();
         listeners.add(new StreamPrint());
+
+        System.out.println("Streaming Starts Now. It will not display anything if currently it is not market hours.");
+
         streamingOperations.quotesAndTradesStream(listeners, new String[]{"AAPL", "GOOG"});
     }
 
