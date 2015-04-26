@@ -9,8 +9,9 @@ It consists of three files:
 
 
 How to run it:
+
 1. Make sure you have maven installed
 2. Clone this repository
 3. ```cd tradeking-api-example; vim src/main/resources/credentials.properties```
-4. Enter your api credentials that you need to get from TradeKing
+4. Enter your api credentials that you need to get from TradeKing. Exit editor (:wq)
 5. ```mvn clean package exec:java -Dexec.mainClass="Example"```
