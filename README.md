@@ -1,6 +1,8 @@
 # tradeking-api-example
 Example how to use Java library for Tradeking API (https://github.com/lrimkus/tradeking-api-consumer)
 
+Documentation of this library: http://www.miserablemind.com/tradeking-api-client-docs/
+
 It consists of three files: 
 
 1. pom.xml for maven to import the library
