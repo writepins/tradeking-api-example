@@ -23,16 +23,16 @@ public class Example {
     public static void main(String[] args) {
 
         Properties credentials = getCredentials();
-        TradeKingOperations traderKingOperations = new TradeKingTemplate(
+        TradeKingOperations tradeKingOperations = new TradeKingTemplate(
                 credentials.getProperty("tradeking.consumerKey"),
                 credentials.getProperty("tradeking.consumerSecret"),
                 credentials.getProperty("tradeking.accessToken"),
                 credentials.getProperty("tradeking.tokenSecret"));
 
-        printCurrentUserEmail(traderKingOperations);
-        printAccountsBalances(traderKingOperations);
-        printStockQuotes(traderKingOperations);
-        printStreaming(traderKingOperations);
+        printCurrentUserEmail(tradeKingOperations);
+        printAccountsBalances(tradeKingOperations);
+        printStockQuotes(tradeKingOperations);
+        printStreaming(tradeKingOperations);
 
     }
 
@@ -43,8 +43,8 @@ public class Example {
      *
      * @param traderKingOperations api client implementation
      */
-    private static void printStreaming(TradeKingOperations traderKingOperations) {
-        StreamingOperations streamingOperations = traderKingOperations.getStreamingOperations();
+    private static void printStreaming(TradeKingOperations tradeKingOperations) {
+        StreamingOperations streamingOperations = tradeKingOperations.getStreamingOperations();
         List<StreamListener> listeners = new ArrayList<>();
         listeners.add(new StreamPrint());
 
@@ -59,8 +59,8 @@ public class Example {
      *
      * @param traderKingOperations api client implementation
      */
-    private static void printStockQuotes(TradeKingOperations traderKingOperations) {
-        MarketOperations marketOperations = traderKingOperations.getMarketOperations();
+    private static void printStockQuotes(TradeKingOperations tradeKingOperations) {
+        MarketOperations marketOperations = tradeKingOperations.getMarketOperations();
         StockQuote[] stocks = marketOperations.getQuoteForStocks(new String[]{"AAPL", "T"});
         for (StockQuote stockQuote : stocks) {
             System.out.println("Last Price for: " + stockQuote.getCompanyName() + ": $" + stockQuote.getLastPrice());
@@ -72,8 +72,8 @@ public class Example {
      *
      * @param traderKingOperations api client implementation
      */
-    private static void printAccountsBalances(TradeKingOperations traderKingOperations) {
-        AccountOperations accountOperations = traderKingOperations.getAccountOperations();
+    private static void printAccountsBalances(TradeKingOperations tradeKingOperations) {
+        AccountOperations accountOperations = tradeKingOperations.getAccountOperations();
 
         AccountsSummary[] accounts = accountOperations.getAccounts();
 
@@ -87,8 +87,8 @@ public class Example {
      *
      * @param traderKingOperations api client implementation
      */
-    private static void printCurrentUserEmail(TradeKingOperations traderKingOperations) {
-        APIOperations apiOperations = traderKingOperations.getAPIOperations();
+    private static void printCurrentUserEmail(TradeKingOperations tradeKingOperations) {
+        APIOperations apiOperations = tradeKingOperations.getAPIOperations();
         UserProfile userProfile = apiOperations.getCurrentUser().getUserProfile();
         System.out.println("Email of current user: " + userProfile.getEmailAddress());
     }
